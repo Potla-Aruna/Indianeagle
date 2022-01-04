@@ -1,995 +1,1017 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-.head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    background-color: rgb(1, 10, 41);
-    padding: 1rem 3.5rem;
-}
-
-.head .logo {
-    font-size: 2.6rem;
-    font-weight: 800;
-    font-style: italic;
-}
-
-.head .logo i {
-    color: orangered;
-}
-
-.head .navbar {
-    flex-basis: content;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 2rem;
-}
-
-.head .menu {
-    display: none;
-}
-
-.navbar span {
-    font-size: 1.5rem;
-    margin: 0 1rem;
-}
-
-.navbar span i {
-    margin-right: .7rem;
-}
-
-.home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    background-image: url('./images/canada_night_water_tower_lights_toronto_13686_540x960.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.home h1 {
-    font-size: 4rem;
-    letter-spacing: .7rem;
-    text-transform: uppercase;
-    font-weight: 400;
-    margin-bottom: 4rem;
-    color: #fff;
-}
-
-.home h1 span {
-    font-weight: 800;
-}
-
-.home .booking {
-    width: 88%;
-    background-color: rgb(1, 10, 41);
-    border-radius: .6rem;
-    position: absolute;
-    bottom: -3rem;
-    padding: 1.5rem 3rem;
-}
-
-.booking .trip {
-    margin: 1.5rem 1.5rem;
-}
-
-.booking .trip select {
-    padding: .7rem;
-    border: none;
-    background-color: rgb(63, 71, 102);
-    border-radius: .5rem;
-    margin-right: .2rem;
-    color: #fff;
-}
-
-.booking .form {
-    display: flex;
-    margin: 2rem 1.5rem 1.5rem 1.5rem;
-}
-
-.form .plane {
-    position: relative;
-    flex-basis: 24%;
-    margin-right: .2rem;
-}
-
-.form .plane i {
-    position: absolute;
-    left: .5rem;
-    top: 1.1rem;
-    color: orangered;
-    font-size: 1.4rem;
-}
-
-.form .plane input {
-    padding: 1rem 2.5rem;
-    /* padding-left: 2.3rem; */
-    width: 100%;
-    background-color: rgb(63, 71, 102);
-    color: #fff;
-    font-weight: 500;
-    border-radius: 0.5rem;
-    border: none;
-}
-
-.form .btn {
-    flex-basis: 3%;
-    background-color: orangered;
-    border-radius: .3rem;
-    border: none;
-    color: #fff;
-}
-
-.form .btn2 {
-    visibility: hidden;
-}
-
-.support {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 3rem auto;
-}
-
-.support .rating {
-    background-color: rgb(146, 153, 179);
-    border-radius: 3rem;
-    padding: 2rem;
-    margin-top: 2rem;
-    color: rgb(1, 10, 41);
-    font-size: 1.5rem;
-}
-
-.support .title {
-    margin-top: 2.5rem;
-    color: rgb(1, 10, 41);
-    text-align: center;
-}
-
-.support .title h1 {
-    font-size: 2.5rem;
-    letter-spacing: .3rem;
-    text-transform: uppercase;
-    font-weight: 800;
-}
-
-.support .title p {
-    font-size: 1.4rem;
-}
-
-.support .card {
-    display: flex;
-    margin-top: 2.5rem;
-    width: 65%;
-}
-
-.support .card .item {
-    flex-basis: 25%;
-    background-color: rgb(146, 153, 179);
-    border-radius: .5rem;
-    margin-right: .2rem;
-    text-align: center;
-    font-size: 1.4rem;
-    text-transform: capitalize;
-    padding-bottom: 1rem;
-}
-
-.support .card .item i {
-    font-size: 2.5rem;
-    color: orangered;
-    margin-top: 2rem;
-}
-
-.support .card .item span {
-    font-weight: 500;
-}
-
-.testimonial {
-    background-color: rgb(1, 10, 41);
-    color: #fff;
-    text-align: center;
-    padding: 4rem 0;
-}
-
-.testimonial span {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    font-weight: 800;
-    padding: .5rem;
-    border-bottom: 2px solid #fff;
-}
-
-.testimonial h2 {
-    text-transform: capitalize;
-    margin-top: 2.5rem;
-    font-size: 1.8rem;
-}
-
-.testimonial p {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-}
-
-.testimonial h3 {
-    margin-top: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.popular {
-    padding: 4rem;
-}
-
-.popular .cap h1 {
-    font-size: 2.2rem;
-    color: rgb(1, 10, 41);
-    padding-bottom: 1.5rem;
-    text-transform: capitalize;
-}
-
-.popular .cap div {
-    width: 12rem;
-    border: 2px solid orangered;
-    background-color: orangered;
-}
-
-.popular .places {
-    display: flex;
-}
-
-.popular .places .place {
-    flex-basis: 25%;
-    margin-right: .6rem;
-    margin-top: 3rem;
-    height: 60vh;
-    padding: 1.5rem;
-    text-align: start;
-    color: #fff;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/tiger.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.places .place div {
-    position: absolute;
-    bottom: 1.5rem;
-}
-
-.places .place p {
-    font-size: 1.3rem;
-}
-
-.places .place h2 {
-    font-size: 1.7rem;
-    margin-bottom: .5rem;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.places .place button {
-    padding: .6rem;
-    background-color: orangered;
-    border-radius: 2rem;
-    margin-top: 1.5rem;
-    width: 7rem;
-    border: none;
-    color: #fff;
-}
-
-.popular .places .place1 {
-    flex-basis: 25%;
-    margin-right: .6rem;
-    margin-top: 3rem;
-    height: 60vh;
-    padding: 1.5rem;
-    text-align: start;
-    color: #fff;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/mountain.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.places .place1 div {
-    position: absolute;
-    bottom: 1.5rem;
-}
-
-.places .place1 p {
-    font-size: 1.3rem;
-}
-
-.places .place1 h2 {
-    font-size: 1.7rem;
-    margin-bottom: .5rem;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.places .place1 button {
-    padding: .6rem;
-    background-color: orangered;
-    border-radius: 2rem;
-    margin-top: 1.5rem;
-    width: 7rem;
-    border: none;
-    color: #fff;
-}
-
-.popular .places .place2 {
-    flex-basis: 25%;
-    margin-right: .6rem;
-    margin-top: 3rem;
-    height: 60vh;
-    padding: 1.5rem;
-    text-align: start;
-    color: #fff;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/indiangate.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.places .place2 div {
-    position: absolute;
-    bottom: 1.5rem;
-}
-
-.places .place2 p {
-    font-size: 1.3rem;
-}
-
-.places .place2 h2 {
-    font-size: 1.7rem;
-    margin-bottom: .5rem;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.places .place2 button {
-    padding: .6rem;
-    background-color: orangered;
-    border-radius: 2rem;
-    margin-top: 1.5rem;
-    width: 7rem;
-    border: none;
-    color: #fff;
-}
-
-.popular .places .place3 {
-    flex-basis: 25%;
-    margin-right: .6rem;
-    margin-top: 3rem;
-    height: 60vh;
-    padding: 1.5rem;
-    text-align: start;
-    color: #fff;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/tree.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.places .place3 div {
-    position: absolute;
-    bottom: 1.5rem;
-}
-
-.places .place3 p {
-    font-size: 1.3rem;
-}
-
-.places .place3 h2 {
-    font-size: 1.7rem;
-    margin-bottom: .5rem;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.places .place3 button {
-    padding: .6rem;
-    background-color: orangered;
-    border-radius: 2rem;
-    margin-top: 1.5rem;
-    width: 7rem;
-    border: none;
-    color: #fff;
-}
-
-.travel {
-    padding: 4rem;
-}
-
-.travel .cap h1 {
-    font-size: 2.2rem;
-    color: rgb(1, 10, 41);
-    padding-bottom: 1.5rem;
-    text-transform: capitalize;
-}
-
-.travel .cap div {
-    width: 12rem;
-    border: 2px solid orangered;
-    background-color: orangered;
-}
-
-.travel .items {
-    display: flex;
-}
-
-.travel .items .item {
-    flex-basis: 33%;
-    margin-right: .6rem;
-    margin-top: 3rem;
-    height: 40vh;
-    padding: 1.5rem;
-    text-align: start;
-    color: #fff;
-    background-image: url('./images/lamp.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.items .item div {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    width: 100%;
-    background-color: rgb(179, 186, 212);
-    color: rgb(1, 10, 41);
-}
-
-.items .item p {
-    font-size: 1.3rem;
-}
-
-.travel .items .item1 {
-    flex-basis: 33%;
-    margin-right: .6rem;
-    margin-top: 3rem;
-    height: 40vh;
-    padding: 1.5rem;
-    text-align: start;
-    color: #fff;
-    background-image: url('./images/flyover.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.items .item1 div {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    width: 100%;
-    background-color: rgb(179, 186, 212);
-    color: rgb(1, 10, 41);
-}
-
-.items .item1 p {
-    font-size: 1.3rem;
-}
-
-.travel .items .item2 {
-    flex-basis: 33%;
-    margin-right: .6rem;
-    margin-top: 3rem;
-    height: 40vh;
-    padding: 1.5rem;
-    text-align: start;
-    color: #fff;
-    background-image: url('./images/flight.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.items .item2 div {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    width: 100%;
-    background-color: rgb(179, 186, 212);
-    color: rgb(1, 10, 41);
-}
-
-.items .item2 p {
-    font-size: 1.3rem;
-}
-
-.departure {
-    padding: 4rem;
-    background-color: rgb(219, 223, 236);
-}
-
-.departure .cap h1 {
-    font-size: 2.2rem;
-    color: rgb(1, 10, 41);
-    padding-bottom: 1.5rem;
-    text-transform: capitalize;
-}
-
-.departure .cap div {
-    width: 12rem;
-    border: 2px solid orangered;
-    background-color: orangered;
-}
-
-.departure .options {
-    display: flex;
-    margin: 2.5rem 0;
-}
-
-.departure .options button {
-    padding: .7rem;
-    border-radius: 2rem;
-    border: none;
-    background-color: orangered;
-    color: #fff;
-    font-size: 1.3rem;
-    margin-right: 2rem;
-}
-
-.departure .cards {
-    display: flex;
-}
-
-.departure .cards .card {
-    flex-basis: 25%;
-    margin-right: .8rem;
-    height: 65vh;
-    color: #fff;
-    background-color: #fff;
-}
-
-.cards .card div {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/sanfransico.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 20%;
-    padding: 1.5rem;
-}
-
-.cards .card div p {
-    font-size: 1.3rem;
-}
-
-.cards .card div h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-.card ul {
-    height: 80%;
-}
-
-.card ul li {
-    display: flex;
-    justify-content: space-between;
-    color: rgb(1, 10, 41);
-    padding: 1.5rem 2rem;
-    border-bottom: 2px dotted gray;
-    font-weight: 600;
-}
-
-.departure .cards .card1 {
-    flex-basis: 25%;
-    margin-right: .8rem;
-    height: 65vh;
-    color: #fff;
-    background-color: #fff;
-}
-
-.cards .card1 div {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/sanjose.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 20%;
-    padding: 1.5rem;
-}
-
-.cards .card1 div p {
-    font-size: 1.3rem;
-}
-
-.cards .card1 div h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-.card1 ul {
-    height: 80%;
-}
-
-.card1 ul li {
-    display: flex;
-    justify-content: space-between;
-    color: rgb(1, 10, 41);
-    padding: 1.5rem 2rem;
-    border-bottom: 2px dotted gray;
-    font-weight: 600;
-}
-
-.departure .cards .card2 {
-    flex-basis: 25%;
-    margin-right: .8rem;
-    height: 65vh;
-    color: #fff;
-    background-color: #fff;
-}
-
-.cards .card2 div {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/washingtondc.jfif');
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 20%;
-    padding: 1.5rem;
-}
-
-.cards .card2 div p {
-    font-size: 1.3rem;
-}
-
-.cards .card2 div h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-.card2 ul {
-    height: 80%;
-}
-
-.card2 ul li {
-    display: flex;
-    justify-content: space-between;
-    color: rgb(1, 10, 41);
-    padding: 1.5rem 2rem;
-    border-bottom: 2px dotted gray;
-    font-weight: 600;
-}
-
-.departure .cards .card3 {
-    flex-basis: 25%;
-    margin-right: .8rem;
-    height: 65vh;
-    color: #fff;
-    background-color: #fff;
-}
-
-.cards .card3 div {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/seattle.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 20%;
-    padding: 1.5rem;
-}
-
-.cards .card3 div p {
-    font-size: 1.3rem;
-}
-
-.cards .card3 div h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-.card3 ul {
-    height: 80%;
-}
-
-.card3 ul li {
-    display: flex;
-    justify-content: space-between;
-    color: rgb(1, 10, 41);
-    padding: 1.5rem 2rem;
-    border-bottom: 2px dotted gray;
-    font-weight: 600;
-}
-
-.email {
-    padding: 4rem 0;
-}
-
-.email h2 {
-    text-align: center;
-    font-size: 1.5rem;
-    color: rgb(1, 10, 41);
-    margin-bottom: 2rem;
-}
-
-.email h2 span {
-    color: orangered;
-}
-
-.email .send {
-    width: 80%;
-    border-radius: .7rem;
-    background-color: rgb(1, 10, 41);
-    padding: 3rem;
-    text-align: center;
-    margin: auto;
-}
-
-.send input {
-    padding: .5rem;
-    border: none;
-    border-bottom: 2px solid #fff;
-    margin-right: 1.5rem;
-    font-size: 1.5rem;
-    background-color: transparent;
-    width: 60%;
-}
-
-.send button {
-    width: 10rem;
-    font-size: 1.6rem;
-    color: #fff;
-    padding: .6rem;
-    border-radius: 2rem;
-    border: none;
-    background-color: rgb(146, 153, 179);
-}
-
-footer {
-    display: flex;
-    justify-content: space-around;
-    background-color: rgb(1, 10, 41);
-    color: #fff;
-    padding: 4rem 6rem;
-}
-
-.box1 {
-    flex-basis: 20%;
-}
-
-.box1 .caption {
-    padding: 1.5rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: orangered;
-}
-
-.box1 a {
-    display: block;
-    text-decoration: none;
-    color: gray;
-    font-size: 1.5rem;
-    padding-bottom: 1rem;
-    padding-top: .5rem;
-    border-bottom: 2px dotted gray;
-    margin: 0 1rem;
-}
-
-.box1 .icon {
-    display: flex;
-}
-
-.box1 .icon a {
-    border: none;
-    font-size: 3.2rem;
-}
-
-.box1 img {
-    margin-right: rem;
-    width: 43%;
-    margin-top: 1rem;
-}
-
-.box1 .img2 {
-    margin-left: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-@media(max-width:768px) {
-    .head .navbar span {
-        display: block;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        html {
+            font-size: 62.5%;
+        }
+        
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            background-color: rgb(1, 10, 41);
+            padding: 1rem 3.5rem;
+            height: 15vh;
+        }
+        
+        .head .logo {
+            font-size: 2.6rem;
+            font-weight: 800;
+            font-style: italic;
+        }
+        
+        .head .logo i {
+            color: orangered;
+        }
+        
+        .head .navbar {
+            flex-basis: content;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 2rem;
+        }
+        
+        .head .menu {
+            display: none;
+        }
+        
+        .navbar span {
+            font-size: 1.8rem;
+            margin-right: 3rem;
+        }
+        
+        .navbar span i {
+            margin-right: 0.7rem;
+        }
+        
+        .home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background-image: url('./images/canada_night_water_tower_lights_toronto_13686_540x960.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .home h1 {
+            font-size: 4rem;
+            letter-spacing: .7rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin-bottom: 4rem;
+            color: #fff;
+        }
+        
+        .home h1 span {
+            font-weight: 800;
+        }
+        
+        .home .booking {
+            width: 88%;
+            background-color: rgb(1, 10, 41);
+            border-radius: .6rem;
+            position: absolute;
+            bottom: -3rem;
+            padding: 1.5rem 3rem;
+        }
+        
+        .booking .trip {
+            margin: 1.5rem 1.5rem;
+        }
+        
+        .booking .trip select {
+            padding: .7rem;
+            border: none;
+            background-color: rgb(63, 71, 102);
+            border-radius: .3rem;
+            margin-right: .2rem;
+            color: #fff;
+            appearance: none;
+            width: 11rem;
+            /* background: transparent; */
+            background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 100%;
+            background-position-y: 5px;
+        }
+        /* .booking .trip select:after {
+        content: '#';
         position: absolute;
-        top: 7rem;
-        left: .3rem;
-        width: 97%;
-        /* margin: auto; */
-        /* background-color: rgb(1, 10, 41); */
-        color: #fff;
-        border-radius: .5rem;
-        opacity: 1;
-    }
-    /* .head .navbar span{
+        top: 0;
+    } */
+        
+        .booking .form {
+            display: flex;
+            margin: 2rem 1.5rem 1.5rem 1.5rem;
+        }
+        
+        .form .plane {
+            position: relative;
+            flex-basis: 24%;
+            margin-right: .2rem;
+        }
+        
+        .form .plane i {
+            position: absolute;
+            left: .5rem;
+            top: 1.1rem;
+            color: orangered;
+            font-size: 1.4rem;
+        }
+        
+        .form .plane input {
+            padding: 1rem 2.5rem;
+            /* padding-left: 2.3rem; */
+            width: 100%;
+            background-color: rgb(63, 71, 102);
+            color: #fff;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            border: none;
+        }
+        
+        .form .btn {
+            flex-basis: 3%;
+            background-color: orangered;
+            border-radius: .3rem;
+            border: none;
+            color: #fff;
+        }
+        
+        .form .btn2 {
+            visibility: hidden;
+        }
+        
+        .support {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 3rem auto;
+        }
+        
+        .support .rating {
+            background-color: rgb(146, 153, 179);
+            border-radius: 3rem;
+            padding: 2rem;
+            margin-top: 2rem;
+            color: rgb(1, 10, 41);
+            font-size: 1.5rem;
+        }
+        
+        .support .title {
+            margin-top: 2.5rem;
+            color: rgb(1, 10, 41);
+            text-align: center;
+        }
+        
+        .support .title h1 {
+            font-size: 2.5rem;
+            letter-spacing: .3rem;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        
+        .support .title p {
+            font-size: 1.4rem;
+        }
+        
+        .support .card {
+            display: flex;
+            margin-top: 2.5rem;
+            width: 65%;
+        }
+        
+        .support .card .item {
+            flex-basis: 25%;
+            background-color: rgb(146, 153, 179);
+            border-radius: .5rem;
+            margin-right: .2rem;
+            text-align: center;
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            padding-bottom: 1rem;
+        }
+        
+        .support .card .item i {
+            font-size: 2.5rem;
+            color: orangered;
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid orangered;
+            border-radius: 50%;
+            background-color: orangered;
+            color: white;
+        }
+        
+        .support .card .item span {
+            font-weight: 500;
+        }
+        
+        .testimonial {
+            background-color: rgb(1, 10, 41);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .testimonial span {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            font-weight: 800;
+            padding: .5rem;
+            border-bottom: 2px solid #fff;
+        }
+        
+        .testimonial h2 {
+            text-transform: capitalize;
+            margin-top: 2.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .testimonial p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .testimonial h3 {
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .popular {
+            padding: 4rem;
+        }
+        
+        .popular .cap h1 {
+            font-size: 2.2rem;
+            color: rgb(1, 10, 41);
+            padding-bottom: 1.5rem;
+            text-transform: capitalize;
+        }
+        
+        .popular .cap div {
+            width: 12rem;
+            border: 2px solid orangered;
+            background-color: orangered;
+        }
+        
+        .popular .places {
+            display: flex;
+        }
+        
+        .popular .places .place {
+            flex-basis: 25%;
+            margin-right: .6rem;
+            margin-top: 3rem;
+            height: 60vh;
+            padding: 1.5rem;
+            text-align: start;
+            color: #fff;
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/tiger.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .places .place div {
+            position: absolute;
+            bottom: 1.5rem;
+        }
+        
+        .places .place p {
+            font-size: 1.3rem;
+        }
+        
+        .places .place h2 {
+            font-size: 1.7rem;
+            margin-bottom: .5rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        
+        .places .place button {
+            padding: .6rem;
+            background-color: orangered;
+            border-radius: 2rem;
+            margin-top: 1.5rem;
+            width: 7rem;
+            border: none;
+            color: #fff;
+        }
+        
+        .popular .places .place1 {
+            flex-basis: 25%;
+            margin-right: .6rem;
+            margin-top: 3rem;
+            height: 60vh;
+            padding: 1.5rem;
+            text-align: start;
+            color: #fff;
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/mountain.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .places .place1 div {
+            position: absolute;
+            bottom: 1.5rem;
+        }
+        
+        .places .place1 p {
+            font-size: 1.3rem;
+        }
+        
+        .places .place1 h2 {
+            font-size: 1.7rem;
+            margin-bottom: .5rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        
+        .places .place1 button {
+            padding: .6rem;
+            background-color: orangered;
+            border-radius: 2rem;
+            margin-top: 1.5rem;
+            width: 7rem;
+            border: none;
+            color: #fff;
+        }
+        
+        .popular .places .place2 {
+            flex-basis: 25%;
+            margin-right: .6rem;
+            margin-top: 3rem;
+            height: 60vh;
+            padding: 1.5rem;
+            text-align: start;
+            color: #fff;
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/indiangate.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .places .place2 div {
+            position: absolute;
+            bottom: 1.5rem;
+        }
+        
+        .places .place2 p {
+            font-size: 1.3rem;
+        }
+        
+        .places .place2 h2 {
+            font-size: 1.7rem;
+            margin-bottom: .5rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        
+        .places .place2 button {
+            padding: .6rem;
+            background-color: orangered;
+            border-radius: 2rem;
+            margin-top: 1.5rem;
+            width: 7rem;
+            border: none;
+            color: #fff;
+        }
+        
+        .popular .places .place3 {
+            flex-basis: 25%;
+            margin-right: .6rem;
+            margin-top: 3rem;
+            height: 60vh;
+            padding: 1.5rem;
+            text-align: start;
+            color: #fff;
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/tree.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .places .place3 div {
+            position: absolute;
+            bottom: 1.5rem;
+        }
+        
+        .places .place3 p {
+            font-size: 1.3rem;
+        }
+        
+        .places .place3 h2 {
+            font-size: 1.7rem;
+            margin-bottom: .5rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        
+        .places .place3 button {
+            padding: .6rem;
+            background-color: orangered;
+            border-radius: 2rem;
+            margin-top: 1.5rem;
+            width: 7rem;
+            border: none;
+            color: #fff;
+        }
+        
+        .travel {
+            padding: 4rem;
+        }
+        
+        .travel .cap h1 {
+            font-size: 2.2rem;
+            color: rgb(1, 10, 41);
+            padding-bottom: 1.5rem;
+            text-transform: capitalize;
+        }
+        
+        .travel .cap div {
+            width: 12rem;
+            border: 2px solid orangered;
+            background-color: orangered;
+        }
+        
+        .travel .items {
+            display: flex;
+        }
+        
+        .travel .items .item {
+            flex-basis: 33%;
+            margin-right: .6rem;
+            margin-top: 3rem;
+            height: 40vh;
+            padding: 1.5rem;
+            text-align: start;
+            color: #fff;
+            background-image: url('./images/lamp.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .items .item div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            width: 100%;
+            background-color: rgb(179, 186, 212);
+            color: rgb(1, 10, 41);
+        }
+        
+        .items .item p {
+            font-size: 1.3rem;
+        }
+        
+        .travel .items .item1 {
+            flex-basis: 33%;
+            margin-right: .6rem;
+            margin-top: 3rem;
+            height: 40vh;
+            padding: 1.5rem;
+            text-align: start;
+            color: #fff;
+            background-image: url('./images/flyover.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .items .item1 div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            width: 100%;
+            background-color: rgb(179, 186, 212);
+            color: rgb(1, 10, 41);
+        }
+        
+        .items .item1 p {
+            font-size: 1.3rem;
+        }
+        
+        .travel .items .item2 {
+            flex-basis: 33%;
+            margin-right: .6rem;
+            margin-top: 3rem;
+            height: 40vh;
+            padding: 1.5rem;
+            text-align: start;
+            color: #fff;
+            background-image: url('./images/flight.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .items .item2 div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            width: 100%;
+            background-color: rgb(179, 186, 212);
+            color: rgb(1, 10, 41);
+        }
+        
+        .items .item2 p {
+            font-size: 1.3rem;
+        }
+        
+        .departure {
+            padding: 4rem;
+            background-color: rgb(219, 223, 236);
+        }
+        
+        .departure .cap h1 {
+            font-size: 2.2rem;
+            color: rgb(1, 10, 41);
+            padding-bottom: 1.5rem;
+            text-transform: capitalize;
+        }
+        
+        .departure .cap div {
+            width: 12rem;
+            border: 2px solid orangered;
+            background-color: orangered;
+        }
+        
+        .departure .options {
+            display: flex;
+            margin: 2.5rem 0;
+        }
+        
+        .departure .options button {
+            padding: .7rem;
+            border-radius: 2rem;
+            border: none;
+            background-color: orangered;
+            color: #fff;
+            font-size: 1.3rem;
+            margin-right: 2rem;
+        }
+        
+        .departure .cards {
+            display: flex;
+        }
+        
+        .departure .cards .card {
+            flex-basis: 25%;
+            margin-right: .8rem;
+            height: 65vh;
+            color: #fff;
+            background-color: #fff;
+        }
+        
+        .cards .card div {
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/sanfransico.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 20%;
+            padding: 1.5rem;
+        }
+        
+        .cards .card div p {
+            font-size: 1.3rem;
+        }
+        
+        .cards .card div h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .card ul {
+            height: 80%;
+        }
+        
+        .card ul li {
+            display: flex;
+            justify-content: space-between;
+            color: rgb(1, 10, 41);
+            padding: 1.5rem 2rem;
+            border-bottom: 2px dotted gray;
+            font-weight: 600;
+        }
+        
+        .departure .cards .card1 {
+            flex-basis: 25%;
+            margin-right: .8rem;
+            height: 65vh;
+            color: #fff;
+            background-color: #fff;
+        }
+        
+        .cards .card1 div {
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/sanjose.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 20%;
+            padding: 1.5rem;
+        }
+        
+        .cards .card1 div p {
+            font-size: 1.3rem;
+        }
+        
+        .cards .card1 div h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .card1 ul {
+            height: 80%;
+        }
+        
+        .card1 ul li {
+            display: flex;
+            justify-content: space-between;
+            color: rgb(1, 10, 41);
+            padding: 1.5rem 2rem;
+            border-bottom: 2px dotted gray;
+            font-weight: 600;
+        }
+        
+        .departure .cards .card2 {
+            flex-basis: 25%;
+            margin-right: .8rem;
+            height: 65vh;
+            color: #fff;
+            background-color: #fff;
+        }
+        
+        .cards .card2 div {
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/washingtondc.jfif');
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 20%;
+            padding: 1.5rem;
+        }
+        
+        .cards .card2 div p {
+            font-size: 1.3rem;
+        }
+        
+        .cards .card2 div h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .card2 ul {
+            height: 80%;
+        }
+        
+        .card2 ul li {
+            display: flex;
+            justify-content: space-between;
+            color: rgb(1, 10, 41);
+            padding: 1.5rem 2rem;
+            border-bottom: 2px dotted gray;
+            font-weight: 600;
+        }
+        
+        .departure .cards .card3 {
+            flex-basis: 25%;
+            margin-right: .8rem;
+            height: 65vh;
+            color: #fff;
+            background-color: #fff;
+        }
+        
+        .cards .card3 div {
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/seattle.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 20%;
+            padding: 1.5rem;
+        }
+        
+        .cards .card3 div p {
+            font-size: 1.3rem;
+        }
+        
+        .cards .card3 div h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .card3 ul {
+            height: 80%;
+        }
+        
+        .card3 ul li {
+            display: flex;
+            justify-content: space-between;
+            color: rgb(1, 10, 41);
+            padding: 1.5rem 2rem;
+            border-bottom: 2px dotted gray;
+            font-weight: 600;
+        }
+        
+        .email {
+            padding: 4rem 0;
+        }
+        
+        .email h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: rgb(1, 10, 41);
+            margin-bottom: 2rem;
+        }
+        
+        .email h2 span {
+            color: orangered;
+        }
+        
+        .email .send {
+            width: 80%;
+            border-radius: .7rem;
+            background-color: rgb(1, 10, 41);
+            padding: 3rem;
+            text-align: center;
+            margin: auto;
+        }
+        
+        .send input {
+            padding: .5rem;
+            border: none;
+            border-bottom: 2px solid #fff;
+            margin-right: 1.5rem;
+            font-size: 1.5rem;
+            background-color: transparent;
+            width: 60%;
+        }
+        
+        .send button {
+            width: 10rem;
+            font-size: 1.6rem;
+            color: #fff;
+            padding: .6rem;
+            border-radius: 2rem;
+            border: none;
+            background-color: rgb(146, 153, 179);
+        }
+        
+        footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(1, 10, 41);
+            color: #fff;
+            padding: 4rem 6rem;
+        }
+        
+        .box1 {
+            flex-basis: 20%;
+        }
+        
+        .box1 .caption {
+            padding: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: orangered;
+        }
+        
+        .box1 a {
+            display: block;
+            text-decoration: none;
+            color: gray;
+            font-size: 1.5rem;
+            padding-bottom: 1rem;
+            padding-top: .5rem;
+            border-bottom: 2px dotted gray;
+            margin: 0 1rem;
+        }
+        
+        .box1 .icon {
+            display: flex;
+        }
+        
+        .box1 .icon a {
+            border: none;
+            font-size: 3.2rem;
+        }
+        
+        .box1 img {
+            margin-right: rem;
+            width: 43%;
+            margin-top: 1rem;
+        }
+        
+        .box1 .img2 {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media(max-width:768px) {
+            .head {
+                height: 7vh;
+            }
+            .head .navbar span {
+                display: block;
+                position: absolute;
+                top: 7rem;
+                left: .3rem;
+                width: 97%;
+                /* margin: auto; */
+                /* background-color: rgb(1, 10, 41); */
+                color: #fff;
+                border-radius: .5rem;
+                opacity: 1;
+            }
+            /* .head .navbar span{
         display:block;
         margin:.5rem 3rem;
         width:100%;
     } */
-    .head .navbar.active {
-        opacity: 1;
-    }
-    .head .menu {
-        display: block;
-        cursor: pointer;
-    }
-    .form {
-        display: flex;
-        flex-direction: column;
-    }
-    .form .plane {
-        margin-bottom: 0.5rem;
-    }
-    .popular .places {
-        flex-wrap: wrap;
-        margin-left: 2rem
-    }
-    .popular .places .place {
-        flex-basis: 90%;
-        height: 40vh;
-    }
-    .popular .places .place1 {
-        flex-basis: 90%;
-        height: 40vh;
-    }
-    .popular .places .place2 {
-        flex-basis: 90%;
-        height: 40vh;
-    }
-    .travel .items {
-        flex-wrap: wrap;
-        margin-left: 2rem;
-    }
-    .travel .items .item {
-        flex-basis: 90%;
-        height: 40vh;
-    }
-    .travel .items .item1 {
-        flex-basis: 90%;
-        height: 40vh;
-    }
-    .travel .items .item2 {
-        flex-basis: 90%;
-        height: 40vh;
-    }
-    .popular .places .place3 {
-        flex-basis: 90%;
-        height: 40vh;
-    }
-    .departure .cards {
-        display: flex;
-        flex-direction: column;
-    }
-    .departure .cards .card {
-        flex-basis: 90%;
-        margin-bottom: 1.5rem;
-        height: 40vh;
-    }
-    .departure .cards .card1 {
-        flex-basis: 90%;
-        height: 40vh;
-        margin-bottom: 1.5rem;
-    }
-    .departure .cards .card2 {
-        flex-basis: 90%;
-        height: 40vh;
-        margin-bottom: 1.5rem;
-    }
-    .departure .cards .card3 {
-        flex-basis: 90%;
-        height: 42vh;
-        margin-bottom: 1.5rem;
-    }
-    .email {
-        margin-top: 25%;
-    }
-    footer {
-        display: flex;
-        flex-direction: column;
-    }
-    .home h1 {
-        margin-bottom: 38rem;
-        font-size: 1.3rem;
-        margin-left: 1rem;
-    }
-    .booking {
-        margin-top: 3rem;
-    }
-    .booking .trip {
-        display: flex;
-        flex-direction: column;
-    }
-    .booking .trip select {
-        margin-bottom: 0.5rem;
-    }
-    .form .btn {
-        flex-basis: 3%;
-        background-color: orangered;
-        border-radius: .3rem;
-        border: none;
-        color: #fff;
-        visibility: hidden;
-    }
-    .form .btn2 {
-        background-color: orangered;
-        border-radius: .3rem;
-        border: none;
-        color: #fff;
-        visibility: visible;
-        width: 40%;
-        margin: auto;
-        padding: 0.5rem;
-        margin-bottom: 2rem;
-    }
-    .support .card {
-        flex-wrap: wrap;
-    }
-    .support .card .item {
-        flex-basis: 90%;
-        /* background-color: rgb(146, 153, 179);
+            .head .navbar.active {
+                opacity: 1;
+            }
+            .head .menu {
+                display: block;
+                cursor: pointer;
+            }
+            .form {
+                display: flex;
+                flex-direction: column;
+            }
+            .form .plane {
+                margin-bottom: 0.5rem;
+            }
+            .popular .places {
+                flex-wrap: wrap;
+                margin-left: 2rem
+            }
+            .popular .places .place {
+                flex-basis: 90%;
+                height: 40vh;
+            }
+            .popular .places .place1 {
+                flex-basis: 90%;
+                height: 40vh;
+            }
+            .popular .places .place2 {
+                flex-basis: 90%;
+                height: 40vh;
+            }
+            .travel .items {
+                flex-wrap: wrap;
+                margin-left: 2rem;
+            }
+            .travel .items .item {
+                flex-basis: 90%;
+                height: 40vh;
+            }
+            .travel .items .item1 {
+                flex-basis: 90%;
+                height: 40vh;
+            }
+            .travel .items .item2 {
+                flex-basis: 90%;
+                height: 40vh;
+            }
+            .popular .places .place3 {
+                flex-basis: 90%;
+                height: 40vh;
+            }
+            .departure .cards {
+                display: flex;
+                flex-direction: column;
+            }
+            .departure .cards .card {
+                flex-basis: 90%;
+                margin-bottom: 1.5rem;
+                height: 40vh;
+            }
+            .departure .cards .card1 {
+                flex-basis: 90%;
+                height: 40vh;
+                margin-bottom: 1.5rem;
+            }
+            .departure .cards .card2 {
+                flex-basis: 90%;
+                height: 40vh;
+                margin-bottom: 1.5rem;
+            }
+            .departure .cards .card3 {
+                flex-basis: 90%;
+                height: 42vh;
+                margin-bottom: 1.5rem;
+            }
+            .email {
+                margin-top: 25%;
+            }
+            footer {
+                display: flex;
+                flex-direction: column;
+            }
+            .home h1 {
+                margin-bottom: 38rem;
+                font-size: 1.3rem;
+                margin-left: 1rem;
+            }
+            .booking {
+                margin-top: 3rem;
+            }
+            .booking .trip {
+                display: flex;
+                flex-direction: column;
+            }
+            .booking .trip select {
+                margin-bottom: 0.5rem;
+                width: 100%;
+            }
+            .form .btn {
+                flex-basis: 3%;
+                background-color: orangered;
+                border-radius: .3rem;
+                border: none;
+                color: #fff;
+                visibility: hidden;
+            }
+            .form .btn2 {
+                background-color: orangered;
+                border-radius: .3rem;
+                border: none;
+                color: #fff;
+                visibility: visible;
+                width: 40%;
+                margin: auto;
+                padding: 0.5rem;
+                margin-bottom: 2rem;
+            }
+            .support .card {
+                flex-wrap: wrap;
+            }
+            .support .card .item {
+                flex-basis: 90%;
+                /* background-color: rgb(146, 153, 179);
                 border-radius: .5rem;
                 margin-right: .2rem;
                 text-align: center;
                 font-size: 1.4rem;
                 text-transform: capitalize; */
-        margin-bottom: 1.5rem;
-    }
-    .departure .options {
-        display: flex;
-        flex-direction: column;
-    }
-    .departure .options button {
-        margin-bottom: 1.5rem;
-    }
-    .send button {
-        margin-top: 2rem;
-    }
-    .box1 .caption {
-        margin: auto;
-    }
-    .box1 .img2 {
-        width: 25%;
-    }
-    .box1 img {
-        width: 25%;
-    }
-    .box1 .icon a {
-        font-size: rem;
-    }
-}
-
-@media(max-width:900px) {
-    footer {
-        flex-wrap: wrap;
-    }
-    .box1 {
-        flex-basis: 33%;
-    }
-}
+                margin-bottom: 1.5rem;
+            }
+            .departure .options {
+                display: flex;
+                flex-direction: column;
+            }
+            .departure .options button {
+                margin-bottom: 1.5rem;
+            }
+            .send button {
+                margin-top: 2rem;
+            }
+            .box1 .caption {
+                margin: auto;
+            }
+            .box1 .img2 {
+                width: 25%;
+            }
+            .box1 img {
+                width: 25%;
+            }
+            .box1 .icon a {
+                font-size: rem;
+            }
+        }
+        
+        @media(max-width:900px) {
+            footer {
+                flex-wrap: wrap;
+            }
+            .box1 {
+                flex-basis: 33%;
+            }
+        }
